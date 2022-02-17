@@ -10,4 +10,4 @@ driver.maximize_window()
 driver.get("https://store.steampowered.com/")
 #wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="global_action_menu"]/a'))).click()
 #//*[@id="global_action_menu"]/a
-login = driver.find_elements(By.ID, 'language_dropdown').click()
+login = driver.find_elements(By.ID, 'language_dropdown')
