@@ -10,5 +10,7 @@ driver.maximize_window()
 #print(dir(webdriver))
 driver.get("http://store.steampowered.com")
 wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="global_action_menu"]/a'))).send_keys(Keys.ENTER)
-#//*[@id="global_action_menu"]/a
+login = wait.until(EC.element_to_be_clickable((By.ID, 'input_username'))).send_keys("login")
+passwd = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="input_password"]'))).send_keys("passw")
 # driver.find_element(By.XPATH, '//*[@id="global_action_menu"]/a').send_keys(Keys.ENTER)
+

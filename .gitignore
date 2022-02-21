@@ -2,3 +2,4 @@ venv_bot_steam/
 *.swp
 .idea/
 .mypy_cache/
+geckodriver.log
