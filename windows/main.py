@@ -27,10 +27,19 @@ import pickle
 driver = webdriver.Chrome()
 wait = WebDriverWait(driver, 10)
 driver.maximize_window()
-driver.get("http://store.steampowered.com")
+driver.get("https://store.steampowered.com/login/")
 
-# for cookie in pickle.load(open("cookies", "rb")):
-#     driver.add_cookie(cookie)
+# wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="global_action_menu"]/a'))).send_keys(Keys.ENTER)
+# login = wait.until(EC.element_to_be_clickable((By.ID, 'input_username'))).send_keys(login_steam)
+# passwd = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="input_password"]'))).send_keys(passw_steam)
+# wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="login_btn_signin"]/button'))).send_keys(Keys.ENTER)
 #
-# time.sleep(5)
-# driver.refresh()
+# #cookies
+# pickle.dump(driver.get_cookies(), open("cookies", "wb"))
+
+driver.delete_all_cookies()
+for cookie in pickle.load(open("cookies", "rb")):
+    driver.add_cookie(cookie)
+
+time.sleep(5)
+driver.refresh()
