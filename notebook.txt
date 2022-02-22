@@ -1,1 +1,3 @@
 1. Змінити інформацію про браузер. Досягти результата коли з'явиться галочка при авторизації
+
+1476436860		store.steampowered.com	steamLoginSecure		unknown_value_please_contact_support	/	0	1	1	1476436860	0	0	1	0	2	443	0
